@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Ticket Application</title>
+</head>
+<body>
+  <center>
+    <!-- Adding a train -->
+    <form method="POST" action="/insert">
+      <br>
+      <h1>Train Inventory</h1>
+      <img src="image.jpg" alt="Train_Image"><br><br>
+      <div class="text">
+        <label class="text-white" >Train Name</label><br>
+        <input type="text" name="train_name" class="input bg-dark" /><br>
+        <label class="text-white" >Train no.</label><br>
+        <input type="text" name="train_number" class="input bg-dark" /><br>
+        <label class="text-white" >Station Name</label><br>
+        <input type="text" name="station_name" class="input bg-dark" /><br>
+        <label class="text-white" >Station Code</label><br>
+        <input type="text" name="station_code" class="input bg-dark" /><br>
+        <label class="text-white" >Departure</label><br>
+        <input type="text" name="departure" class="tarikh bg-dark text-white" /><br>
+        <button>Add Train</button><br><br>
+      </div>
+    </form>
+    <!-- Displaying all trains -->
+    <form method="POST" action="/all_trains">
+      <div class="text">
+        <button>Fetch all data</button><br><br>
+      </div>
+    </form>
+    <!-- Finding train -->
+    <form method="POST" action="/one_train">
+      <div class="text">
+        <label class="text-white" >Find By Train No.</label><br>
+        <input type="text" name="train_number" class="tarikh bg-dark text-white" /><br>
+        <button>Find a record</button><br><br>
+      </div>
+    </form>
+    <!-- Find train by station name -->
+    <form method="POST" action="/station_train">
+      <div class="text">
+        <label class="text-white" >Find By Station Name</label><br>
+        <input type="text" name="station_name" class="tarikh bg-dark text-white" /><br>
+        <button>Find records</button><br><br>
+      </div>
+    </form>
+    <!-- Deleting Train -->
+    <form method="POST" action="/delete" >
+      <div class="text">
+        <label class="text-white" >Delete By Train No.</label><br>
+        <input type="text" name="train_number" class="tarikh bg-dark text-white" /><br>
+        <button>Delete a Train</button><br><br>
+      </div>
+    </form>
+  </center>
+</body>
+</html>
+

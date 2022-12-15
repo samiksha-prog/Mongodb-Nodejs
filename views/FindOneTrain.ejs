@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Train's Record</title>
+</head>
+<body>
+  <center>
+    <!-- Adding a train -->
+    <form method="POST" action="/insert">
+      <br>
+      <h1>Train Inventory</h1>
+      <img src="image.jpg" alt="Train_Image"><br><br>
+      <div class="text">
+        <label class="text-white" style="margin-left: 10px">Train Name</label><br>
+        <input type="text" name="train_name" class="input bg-dark" /><br>
+        <label class="text-white" style="margin-left: 10px">Train no.</label><br>
+        <input type="text" name="train_number" class="input bg-dark" /><br>
+        <label class="text-white" style="margin-left: 10px">Station Name</label><br>
+        <input type="text" name="station_name" class="input bg-dark" /><br>
+        <label class="text-white" style="margin-left: 10px">Station Code</label><br>
+        <input type="text" name="station_code" class="input bg-dark" /><br>
+        <label class="text-white" style="margin-left: 10px">Departure</label><br>
+        <input type="text" name="departure" class="tarikh bg-dark text-white" /><br>
+        <button>Add Train</button>
+      </div>
+    </form>
+    <!-- Displaying all trains -->
+    <form method="POST" action="/all_trains">
+      <div class="text">
+        <button>Fetch all data</button><br><br>
+      </div>
+    </form>
+    <!-- Finding train -->
+    <form method="POST" action="/one_train">
+      <div class="text">
+        <label class="text-white" style="margin-left: 10px">Find By Train No.</label><br>
+        <input type="text" name="train_number" class="tarikh bg-dark text-white" /><br>
+        <button>Find a record</button><br><br>
+        <table>
+          <tr>
+            <th>Train No.</th>
+            <th>Train Name</th>
+            <th>Staion</th>
+            <th>Station Code</th>
+            <th>Departure</th>
+          </tr>
+            <tr>
+              <% if (user) { %>
+                <td><%-user.train_number%></td>
+                <td><%-user.train_name%></td>
+                <td><%-user.station_name%></td>
+                <td><%-user.station_code%></td>
+                <td><%-user.departure%></td>
+              <% }
+              %>
+            </tr>
+        </table><br>
+      </div>
+    </form>
+    <!-- Find train by station name -->
+    <form method="POST" action="/station_train">
+      <div class="text">
+        <label class="text-white" >Find By Station Name</label><br>
+        <input type="text" name="station_name" class="tarikh bg-dark text-white" /><br>
+        <button>Find records</button><br><br>
+      </div>
+    </form>
+    <!-- Deleting Train -->
+    <form method="POST" action="/delete" >
+      <div class="text">
+        <label class="text-white" style="margin-left: 10px">Delete By Train No.</label><br>
+        <input type="text" name="train_number" class="tarikh bg-dark text-white" /><br>
+        <button>Delete a Train</button><br><br>
+      </div>
+    </form>
+  </center>
+</body>
+</html>
+
+
+

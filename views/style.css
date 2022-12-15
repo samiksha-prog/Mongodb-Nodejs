@@ -1,0 +1,46 @@
+body{
+    background-color: cadetblue;
+}
+form{
+    background-color: rgb(203, 204, 193);
+    width: 50%;
+    height: 100%;
+    
+    
+}
+img{
+    width: 70%;
+    height: 85%;
+}
+h1{
+    /* text-align: center; */
+    /* font-family: 'Tapestry', cursive; */
+    font-size: 300%;
+}
+.text{
+
+    font-size: larger;
+    /* font-family: 'Tapestry', cursive; */
+}
+
+input{
+    position:inherit;
+    margin-top: 5px;
+    width: 400px;
+    height: 20px;
+
+}
+tr,th,td{
+    border: 1px solid black;
+    font-size: small;
+    /* text-align: center; */
+}
+th{
+    background-color:rgb(109, 110, 104);
+}
+button{
+    padding: 10px;
+    position: inherit;
+    margin-top: 15px;
+    width: 150px;
+}
